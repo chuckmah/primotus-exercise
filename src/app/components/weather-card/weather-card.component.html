@@ -5,7 +5,15 @@
   </ion-card-header>
 
   <ion-card-content>
-      <p>display Weather here!</p>
+    <div *ngIf="weather">
+      <p>Name : {{weather.name}}</p>
+      <p>Temp min : {{weather.main.temp_min}} F</p>
+      <p>Temp max : {{weather.main.temp_max}} F</p>
+      <p>Humidity : {{weather.main.humidity}} </p>
+      <p>Pressure : {{weather.main.pressure}} </p>
+      <p>Last updated : {{weather.lastUpdated}}</p>
+    </div>
+
   </ion-card-content>
 
 </ion-card>

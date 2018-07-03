@@ -1,3 +1,4 @@
+import { WeatherService } from './providers/weather.service';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -20,6 +21,7 @@ import { WeatherCardComponent } from './components/weather-card/weather-card.com
 import { GpsCoordinatesCardComponent } from './components/gps-coordinates-card/gps-coordinates-card.component';
 
 import { Geolocation } from '@ionic-native/geolocation';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { Geolocation } from '@ionic-native/geolocation';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
     StoreModule.forRoot(reducers, { metaReducers }),
     // set up dev tools (remove in production)
@@ -53,6 +56,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     StatusBar,
     SplashScreen,
     Geolocation,
+    WeatherService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
