@@ -6,6 +6,6 @@
 
 <ion-content padding>
   <h2>Welcome!</h2>
-  <gps-coordinates-card></gps-coordinates-card>
+  <gps-coordinates-card [gpsCoordinates]="gpsCoordinates$ | async"></gps-coordinates-card>
   <weather-card></weather-card>
 </ion-content>

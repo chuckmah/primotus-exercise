@@ -19,6 +19,8 @@ import { AppEffects } from './app.effects';
 import { WeatherCardComponent } from './components/weather-card/weather-card.component';
 import { GpsCoordinatesCardComponent } from './components/gps-coordinates-card/gps-coordinates-card.component';
 
+import { Geolocation } from '@ionic-native/geolocation';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -50,6 +52,7 @@ import { GpsCoordinatesCardComponent } from './components/gps-coordinates-card/g
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

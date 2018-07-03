@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { GpsCoordinates } from './../../model/index';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'gps-coordinates-card',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GpsCoordinatesCardComponent implements OnInit {
 
+  @Input() gpsCoordinates: GpsCoordinates;
+  
   constructor() { }
 
   ngOnInit() {

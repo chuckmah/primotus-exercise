@@ -5,7 +5,14 @@
   </ion-card-header>
 
   <ion-card-content>
-      <p>display GPS here!</p>
+
+      <div *ngIf="gpsCoordinates">
+          <p >Accuracy : {{gpsCoordinates.accuracy}}</p>
+          <p >Longitude : {{gpsCoordinates.longitude}}</p>
+          <p >Latitude : {{gpsCoordinates.latitude}}</p>
+          <p >Last updated : {{gpsCoordinates.lastUpdated}}</p>
+      </div>
+
   </ion-card-content>
 
 </ion-card>
