@@ -16,6 +16,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './app.effects';
+import { WeatherCardComponent } from './components/weather-card/weather-card.component';
+import { GpsCoordinatesCardComponent } from './components/gps-coordinates-card/gps-coordinates-card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AppEffects } from './app.effects';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    WeatherCardComponent,
+    GpsCoordinatesCardComponent
   ],
   imports: [
     BrowserModule,
