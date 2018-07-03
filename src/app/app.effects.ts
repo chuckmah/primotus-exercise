@@ -45,9 +45,9 @@ export class AppEffects {
         })
     );
 
-  //Update weather every seconds with last gps position
+  //Update weather every 5 seconds with last gps position
   @Effect()
-  updateWeatherEachSeconds = Observable.interval(1000)
+  updateWeatherEachSeconds = Observable.interval(5000)
     .withLatestFrom(this.store.select(getGpsCoordinates))
     .map(([any, gpsCoordinates]) => gpsCoordinates)
     .filter(gpsCoordinates => gpsCoordinates !== null)
